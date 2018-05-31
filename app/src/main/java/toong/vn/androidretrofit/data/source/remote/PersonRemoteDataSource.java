@@ -3,7 +3,7 @@ package toong.vn.androidretrofit.data.source.remote;
 import io.reactivex.Observable;
 import toong.vn.androidretrofit.data.model.Person;
 import toong.vn.androidretrofit.data.source.BaseRemoteDataSource;
-import toong.vn.androidretrofit.data.source.remote.api.SampleAPI;
+import toong.vn.androidretrofit.data.source.remote.api.SampleAuthenticateAPI;
 import toong.vn.androidretrofit.data.source.remote.api.SampleNoneAuthenticateAPI;
 
 /**
@@ -14,15 +14,15 @@ import toong.vn.androidretrofit.data.source.remote.api.SampleNoneAuthenticateAPI
 public class PersonRemoteDataSource extends BaseRemoteDataSource {
     private static volatile PersonRemoteDataSource instance;
 
-    private PersonRemoteDataSource(SampleAPI sampleAPI,
+    private PersonRemoteDataSource(SampleAuthenticateAPI sampleAuthenticateAPI,
             SampleNoneAuthenticateAPI sampleNoneAuthenticateAPI) {
-        super(sampleAPI, sampleNoneAuthenticateAPI);
+        super(sampleAuthenticateAPI, sampleNoneAuthenticateAPI);
     }
 
-    public static PersonRemoteDataSource getInstance(SampleAPI sampleAPI,
+    public static PersonRemoteDataSource getInstance(SampleAuthenticateAPI sampleAuthenticateAPI,
             SampleNoneAuthenticateAPI sampleNoneAuthenticateAPI) {
         if (instance == null) {
-            instance = new PersonRemoteDataSource(sampleAPI, sampleNoneAuthenticateAPI);
+            instance = new PersonRemoteDataSource(sampleAuthenticateAPI, sampleNoneAuthenticateAPI);
         }
         return instance;
     }

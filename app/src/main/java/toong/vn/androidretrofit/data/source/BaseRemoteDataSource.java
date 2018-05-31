@@ -1,6 +1,6 @@
 package toong.vn.androidretrofit.data.source;
 
-import toong.vn.androidretrofit.data.source.remote.api.SampleAPI;
+import toong.vn.androidretrofit.data.source.remote.api.SampleAuthenticateAPI;
 import toong.vn.androidretrofit.data.source.remote.api.SampleNoneAuthenticateAPI;
 
 /**
@@ -9,10 +9,10 @@ import toong.vn.androidretrofit.data.source.remote.api.SampleNoneAuthenticateAPI
  */
 
 public class BaseRemoteDataSource {
-    protected SampleAPI sampleAPI;
+    protected SampleAuthenticateAPI sampleAPI;
     protected SampleNoneAuthenticateAPI sampleNoneAuthenticateAPI;
 
-    public BaseRemoteDataSource(SampleAPI sampleAPI,
+    public BaseRemoteDataSource(SampleAuthenticateAPI sampleAPI,
             SampleNoneAuthenticateAPI sampleNoneAuthenticateAPI) {
         this.sampleAPI = sampleAPI;
         this.sampleNoneAuthenticateAPI = sampleNoneAuthenticateAPI;

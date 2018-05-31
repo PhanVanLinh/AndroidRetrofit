@@ -1,5 +1,6 @@
 package toong.vn.androidretrofit.screen.main;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -27,6 +28,11 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
 
     @Override
     public void onGetPersonSuccess(Person person) {
+        Intent intent = null;
+        Person person =null;
+        intent.putExtra("s", person);
 
+        Bundle bundle = null;
+        bundle.putParcelable();
     }
 }

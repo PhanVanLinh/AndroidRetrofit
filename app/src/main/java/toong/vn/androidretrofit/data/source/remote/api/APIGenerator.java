@@ -26,11 +26,11 @@ public class APIGenerator {
         okHttpClientBuilder.connectTimeout(10, TimeUnit.SECONDS);
         okHttpClientBuilder.readTimeout(30, TimeUnit.SECONDS);
 
-        return new Retrofit.Builder().baseUrl(baseUrl)
+        Retrofit retrofit = new Retrofit.Builder().baseUrl(baseUrl)
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(okHttpClient)
-                .build()
-                .create(serviceClass);
+                .build();
+        return retrofit.create(serviceClass);
     }
 }

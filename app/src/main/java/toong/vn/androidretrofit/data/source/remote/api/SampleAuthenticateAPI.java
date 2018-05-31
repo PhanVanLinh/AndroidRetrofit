@@ -4,7 +4,9 @@ import io.reactivex.Observable;
 import retrofit2.http.GET;
 import toong.vn.androidretrofit.data.model.Person;
 
-public interface SampleAPI {
+public interface SampleAuthenticateAPI {
     @GET("person/sample-single-person-get.php")
     Observable<Person> getSinglePerson();
+
+
 }
